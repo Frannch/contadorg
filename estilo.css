@@ -1,0 +1,90 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna:wght@100..400&display=swap');
+
+body {
+    background-color: gray;
+    background-image: url();
+    background-size: cover;
+    /* Hace que la imagen cubra toda la pantalla */
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Playwrite IT Moderna', cursive;
+    /* Ocupa el 100% de la altura de la pantalla */
+}
+
+a {
+    height: 50vh;
+}
+
+/* Asegura que los botones cubran la pantalla en 2 partes iguales */
+button {
+    flex: 1;
+    /* Cada botón ocupa 1/2 de la altura */
+    width: 100%;
+    height: 50vh;
+    border: none;
+    font-size: 30px;
+    font-weight: bold;
+    color: #311d66;
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.5s;
+    font-family: 'Playwrite IT Moderna', cursive;
+}
+
+/* Efecto de hover con fondo negro expandiéndose */
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: rgba(98, 179, 74, 0.7);
+    /* Negro con transparencia */
+    z-index: -1;
+    transition: width 0.5s ease-in-out;
+
+}
+
+/* Expansión desde distintos lados */
+#contador::before {
+    right: 0;
+}
+
+#pokemon::before {
+    left: 0;
+}
+
+#form:before {
+    left: 0;
+}
+
+#ruleta::before {
+    left: 0;
+}
+
+#ruleta:hover:before {
+    width: 100%;
+}
+
+
+/* Al hacer hover, el efecto de color se activa */
+#contador:hover::before,
+#pokemon:hover:before,
+#form:hover:before {
+    width: 100%;
+}
+
+/*=====================================================================================================*/
+@media (max-width: 768px) {
+    button {
+        color: rgb(83, 83, 83);
+    }
+}

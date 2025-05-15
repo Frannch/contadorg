@@ -1,68 +1,20 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contador de Tiempo</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-        }
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="shorcut icon" href="h.png" type="image/x-icon">
+    <title>Inicio</title>
 
-        .counter-container {
-            text-align: center;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
 
-        h1 {
-            color: #333;
-        }
-
-        .time {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #008B8B;
-        }
-    </style>
 </head>
 
+
 <body>
-    <div class="counter-container">
-        <h1>Han pasado</h1>
-        <div class="time" id="timeCount"></div>
-        <p>Desde que somos Novios <3 </p>
-    </div>
-
-    <script>
-        // Fecha en la que empezaron
-        const startDate = new Date("2023-09-05T17:00:00"); // Cambia esta fecha por la fecha de inicio
-
-        function updateCounter() {
-            const today = new Date();
-            const timeDifference = today - startDate;
-
-            const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
-
-            document.getElementById("timeCount").textContent = `${days} días, ${hours} horas, ${minutes} minutos, ${seconds} segundos`;
-        }
-
-        // Actualiza el contador cada segundo
-        updateCounter();
-        setInterval(updateCounter, 1000);
-    </script>
+    <a href="count.html"><button id="contador">Contador</button></a>
+    <a href="song.html"><button id="ruleta">Canción</button></a>
 </body>
 
 </html>
