@@ -46,7 +46,7 @@ button::before {
     top: 0;
     width: 0;
     height: 100%;
-    background: rgba(98, 179, 74, 0.7);
+    background: rgba(179, 74, 179, 0.7);
     /* Negro con transparencia */
     z-index: -1;
     transition: width 0.5s ease-in-out;
